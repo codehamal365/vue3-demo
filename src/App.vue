@@ -3,16 +3,19 @@ import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 
 import TestVue from './components/TestVue.vue'
+import TestReactive from './components/TestReactive.vue'
 </script>
 
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
+    <div>
       <HelloWorld msg="You did it!" />
-
+      <hr/>
       <test-vue />
+      <hr/>
+      <test-reactive />
     </div>
   </header>
 
