@@ -9,6 +9,12 @@
     <div>
         <button @click="changeCount">change count</button>
     </div>
+
+    <h2>当前 user name 为：{{ name }}</h2>
+    <h2>当前 user computed name 为：{{ computedName }}</h2>
+    <div>
+        <button @click="changeName">change name</button>
+    </div>
 </template>
 
 <script setup name="Count">
@@ -33,9 +39,16 @@ const changeCount = () => {
 const { doubleCount, tripleCount } = storeToRefs(countStore);
 
 countStore.$subscribe((mutation, state) => {
-  console.log(mutation, state)
+    console.log(mutation, state)
 
-  // 每当它发生变化时，将整个状态持久化到本地存储
-  localStorage.setItem('count', JSON.stringify(state))
+    // 每当它发生变化时，将整个状态持久化到本地存储
+    localStorage.setItem('count', JSON.stringify(state))
 })
+
+import { useUserStore } from "@/store/modules/user";
+
+const userStore = useUserStore();
+
+const { name, computedName } = storeToRefs(userStore);
+const { changeName } = userStore;
 </script>
