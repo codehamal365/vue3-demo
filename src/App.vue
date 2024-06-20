@@ -1,61 +1,19 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-
-import TestVue from './components/TestVue.vue'
-import TestReactive from './components/TestReactive.vue'
-import TestToRef from './components/TestToRef.vue'
-import TestComposables from './components/TestComposables.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div>
-      <HelloWorld msg="You did it!" />
-      <hr/>
-      <test-vue />
-      <hr/>
-      <test-reactive />
-      <hr/>
-      <test-to-ref />
-
-      <hr/>
-      <test-composables/>
+  <div class="app">
+    <h2 class="title">Vue路由测试</h2>
+    <!-- 导航区 -->
+    <div class="navigate">
+      <RouterLink to="/home" active-class="active">首页</RouterLink>
+      <RouterLink to="/news" active-class="active">新闻</RouterLink>
+      <RouterLink to="/about" active-class="active">关于</RouterLink>
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+    <!-- 展示区 -->
+    <div class="main-content">
+      <RouterView></RouterView>
+    </div>
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
+<script lang="ts" setup name="App">
+  import {RouterLink,RouterView} from 'vue-router'  
+</script>
