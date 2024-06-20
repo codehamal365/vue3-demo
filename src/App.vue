@@ -4,6 +4,7 @@ import TheWelcome from './components/TheWelcome.vue'
 
 import TestVue from './components/TestVue.vue'
 import TestReactive from './components/TestReactive.vue'
+import TestToRef from './components/TestToRef.vue'
 </script>
 
 <template>
@@ -16,6 +17,8 @@ import TestReactive from './components/TestReactive.vue'
       <test-vue />
       <hr/>
       <test-reactive />
+      <hr/>
+      <test-to-ref />
     </div>
   </header>
 
