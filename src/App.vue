@@ -5,6 +5,7 @@ import TheWelcome from './components/TheWelcome.vue'
 import TestVue from './components/TestVue.vue'
 import TestReactive from './components/TestReactive.vue'
 import TestToRef from './components/TestToRef.vue'
+import TestComposables from './components/TestComposables.vue'
 </script>
 
 <template>
@@ -19,6 +20,9 @@ import TestToRef from './components/TestToRef.vue'
       <test-reactive />
       <hr/>
       <test-to-ref />
+
+      <hr/>
+      <test-composables/>
     </div>
   </header>
 
