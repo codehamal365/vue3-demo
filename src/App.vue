@@ -7,6 +7,7 @@
       <RouterLink to="/news" active-class="active">新闻</RouterLink>
       <RouterLink to="/about" active-class="active">关于</RouterLink>
       <RouterLink to="/store" active-class="active">测试store</RouterLink>
+      <RouterLink to="/mock" active-class="active">测试mock api</RouterLink>
     </div>
     <!-- 展示区 -->
     <div class="main-content">

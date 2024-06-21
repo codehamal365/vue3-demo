@@ -3,6 +3,7 @@ import Home from '@/views/Home.vue'
 import News from '@/views/News.vue'
 import About from '@/views/About.vue'
 import TestStore from '@/views/TestStore.vue'
+import TestMock from '@/views/TestMock.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -22,6 +23,10 @@ const router = createRouter({
         {
             path: '/store',
             component: TestStore
+        },
+        {
+            path: '/mock',
+            component: TestMock
         }
     ]
 })
