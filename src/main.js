@@ -10,4 +10,6 @@ const app = createApp(App)
 app.use(router)
 app.use(store)
 
+console.log(import.meta.env)
+
 app.mount('#app')
